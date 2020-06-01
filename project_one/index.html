@@ -30,9 +30,9 @@
 
         var database = firebase.database();
 
-        function ingresartext() {
+        function ingre() {
             var userId = firebase.auth().currentUser.uid;
-            firebase.database().ref('users/' + userId).set({
+            firebase.database().ref('users/' + userId).add({
                 username: "mi nombre",
                 email: "mi email",
                 profile_picture: "mi imagen"
@@ -61,7 +61,7 @@
         <div>
             <input type="text" id="chat_input">
         </div>
-        <button id="chat_button" onclick="ingresartext()" >Enviar</button>
+        <button id="chat_button" onclick="ingre()" >Enviar</button>
     </form>
 </body>
 
