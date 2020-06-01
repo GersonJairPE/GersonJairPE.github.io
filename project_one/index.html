@@ -25,10 +25,12 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
+    </script>
+    <script>
 
         var database = firebase.database();
 
-        function ingresar_text() {
+        function ingresartext() {
             var userId = firebase.auth().currentUser.uid;
             firebase.database().ref('users/' + userId).set({
                 username: "mi nombre",
@@ -37,7 +39,6 @@
             });
 
         }
-
     </script>
 
 </head>
@@ -60,7 +61,7 @@
         <div>
             <input type="text" id="chat_input">
         </div>
-        <button id="chat_button" oneclick="ingresar_text()">Enviar</button>
+        <button id="chat_button" onclick="ingresartext()" >Enviar</button>
     </form>
 </body>
 
