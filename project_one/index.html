@@ -30,13 +30,12 @@
 
         function ingresar_text() {
             var userId = firebase.auth().currentUser.uid;
-            function writeUserData(userId) {
-                firebase.database().ref('users/' + userId).set({
-                    username: "mi nombre",
-                    email: "mi email",
-                    profile_picture: "mi imagen"
-                });
-            }
+            firebase.database().ref('users/' + userId).set({
+                username: "mi nombre",
+                email: "mi email",
+                profile_picture: "mi imagen"
+            });
+
         }
 
     </script>
