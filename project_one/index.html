@@ -32,7 +32,7 @@
 
         function ingre() {
             var userId = firebase.auth().currentUser.uid;
-            firebase.database().ref('users/' + userId).add({
+            firebase.database().ref('users/').add({
                 username: "mi nombre",
                 email: "mi email",
                 profile_picture: "mi imagen"
