@@ -32,7 +32,7 @@
 
         function ingre() {
             var userId = firebase.auth().currentUser.uid;
-            firebase.database().ref('users/').add({
+            firebase.database().ref().add({
                 username: "mi nombre",
                 email: "mi email",
                 profile_picture: "mi imagen"
@@ -53,7 +53,7 @@
     <p>
         Esta es la versión inicial de un chat de prueba
     </p>
-    <form action="" method="POST">
+    <form>
         <div>
             <textarea name="chat_area" id="chat_area" cols="30" rows="10" disabled='true'>
             </textarea>
