@@ -25,11 +25,14 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
+
+        // Get a reference to the database service
+        var database = firebase.database();
     </script>
 
     <script>
 
-       // var database = firebase.database();
+        // var database = firebase.database();
         firebase.database().ref('hijo1').once('value').then(function (snapshot) {
             if (snapshot.val()) {
                 var username = snapshot.val().username;
@@ -47,7 +50,7 @@
 
     <script>
 
-       //var database = firebase.database();
+        //var database = firebase.database();
 
         function ingre() {
             // var userId = firebase.auth().currentUser.uid;
