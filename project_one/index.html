@@ -29,7 +29,7 @@
 
     <script>
 
-        firebase.database().ref('/hijo1').once('value').then(function (snapshot) {
+        firebase.database().ref('hijo1').once('value').then(function (snapshot) {
             if (snapshot.val()) {
                 var username = snapshot.val().username;
                 //Mostrando datos en los campos
