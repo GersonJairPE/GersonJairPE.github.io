@@ -7,7 +7,7 @@
     <title>Document</title>
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-app.js"></script>
 
     <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -25,15 +25,10 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
-        window.alert("Se inicializo Firebase correctamente");
-
-        // Get a reference to the database service
-        var database = firebase.database().ref();
-        window.alert("Se guardo la referencia de la base de datos correctamente");
     </script>
 
     <script>
-        var database = firebase.database().ref();
+
         // var database = firebase.database();
         firebase.database().ref('hijo1').once('value').then(function (snapshot) {
             if (snapshot.val()) {
