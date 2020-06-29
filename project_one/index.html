@@ -27,13 +27,13 @@
         firebase.initializeApp(firebaseConfig);
 
         // Get a reference to the database service
-        var database = firebase.database.ref();
+        var database = firebase.database().ref();
     </script>
 
     <script>
-
+        var database = firebase.database().ref();
         // var database = firebase.database();
-        database.ref('hijo1').once('value').then(function (snapshot) {
+        firebase.database().ref('hijo1').once('value').then(function (snapshot) {
             if (snapshot.val()) {
                 var username = snapshot.val().username;
                 //Mostrando datos en los campos
