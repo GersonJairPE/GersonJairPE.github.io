@@ -26,18 +26,38 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
     </script>
+
+    <script>
+
+        firebase.database().ref('/Usuarios/' + userId).once('value').then(function (snapshot) {
+            if (snapshot.val()) {
+                var username = snapshot.val().username;
+                //Mostrando datos en los campos
+                document.getElementById("chat_area").innerHTML =
+                    `
+            <input type="text" id="user_nom" value="${username}">
+            `
+            }
+            // ...
+        });
+
+    </script>
+
+
     <script>
 
         var database = firebase.database();
 
         function ingre() {
-           // var userId = firebase.auth().currentUser.uid;
+            // var userId = firebase.auth().currentUser.uid;
             firebase.database().ref('hijo1').set({
                 username: "Gerson jair per"
             });
 
         }
     </script>
+
+
 
 </head>
 
@@ -59,7 +79,7 @@
         <div>
             <input type="text" id="chat_input">
         </div>
-        <button id="chat_button" onclick="ingre()" >Enviar</button>
+        <button id="chat_button" onclick="ingre()">Enviar</button>
     </form>
 </body>
 
