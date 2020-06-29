@@ -25,9 +25,11 @@
         };
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
+        window.alert("Se inicializo Firebase correctamente");
 
         // Get a reference to the database service
         var database = firebase.database().ref();
+        window.alert("Se guardo la referencia de la base de datos correctamente");
     </script>
 
     <script>
