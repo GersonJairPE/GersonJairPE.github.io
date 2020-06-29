@@ -31,8 +31,8 @@
         var database = firebase.database();
 
         function ingre() {
-            var userId = firebase.auth().currentUser.uid;
-            firebase.database().ref().add({
+           // var userId = firebase.auth().currentUser.uid;
+            firebase.database().ref('hijo1/').set({
                 username: "mi nombre",
                 email: "mi email",
                 profile_picture: "mi imagen"
