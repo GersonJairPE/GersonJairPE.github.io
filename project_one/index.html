@@ -28,16 +28,11 @@
     </script>
 
     <script>
-
-        // var database = firebase.database();
         firebase.database().ref('hijo1').once('value').then(function (snapshot) {
             if (snapshot.val()) {
                 var username = snapshot.val().username;
                 //Mostrando datos en los campos
-                document.getElementById("chat_area").innerHTML =
-                    `
-            <input type="text" id="user_nom" value="${username}">
-            `
+                document.getElementById("chat_area").innerHTML = username
             }
             // ...
         });
@@ -47,12 +42,10 @@
 
     <script>
 
-        //var database = firebase.database();
-
         function ingre() {
             // var userId = firebase.auth().currentUser.uid;
             firebase.database().ref('hijo1').set({
-                username: "Gerson jair per"
+                username: document.getElementById("chat_input").value
             });
 
         }
@@ -75,6 +68,7 @@
     <form>
         <div>
             <textarea name="chat_area" id="chat_area" cols="30" rows="10" disabled='true'>
+            
             </textarea>
         </div>
         <div>
