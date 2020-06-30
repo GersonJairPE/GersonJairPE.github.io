@@ -32,7 +32,7 @@
             if (snapshot.val()) {
                 var username = snapshot.val().username;
                 //Mostrando datos en los campos
-                document.getElementById("chat_area").innerHTML = username
+                document.getElementById("chat_area").innerHTML = `${username}<br>${username}`
             }
             // ...
         });
@@ -52,7 +52,7 @@
                 if (snapshot.val()) {
                     var username = snapshot.val().username;
                     //Mostrando datos en los campos
-                    document.getElementById("chat_area").innerHTML = `"${username}"<br>"${username}"`
+                    document.getElementById("chat_area").innerHTML = `${username}<br>${username}`
                 }
                 // ...
             });
